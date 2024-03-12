@@ -1,26 +1,26 @@
-package exception_handling;
+package string;
 
-import java.io.FileReader;
+import java.util.Scanner;
 
 public class pro1 {
 	public static void main(String[]args)
 	{
-		System.out.println("main method started");
-		System.out.println("welcome to Exception handling");
-		//graceful termination is when program  execute succefull
-		int i=10/0;
-		//abnoramal termination>>when termintion in middlee of execution;
-		FileReader fr =new FileReader("anc.txt");
-		//it will give me an error durnig compiled time >>
-		
-		//it is used to check the file and example at compiled time  exception and checked exception ..
-		//it will give the file not found exception;
-		System.out.println("main method ended");
-		String s=null;
-		s.length();
-		//exmple of null pointer exception and it is unchecked exception;
-		
+		/*Scanner sc=new Scanner(System.in);
+		System.out.println("enter the String ");
+		String st=sc.nextLine();
+		System.out.println(st);
+		char ch=sc.nextLine().charAt(0);
+		System.out.println(ch);
+		*/
+		//String st="sumitSehgal";
+		//System.out.println(st.charAt(0));
+		//char ch=66;//here type cast implicitly
+		//System.out.print(ch);
+		int x='A';
+		x=x+2;
+		System.out.println(x);
 		
 	}
+	
 
 }
