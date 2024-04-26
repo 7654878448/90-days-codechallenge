@@ -1,44 +1,48 @@
-package annotation_based_connection;
+package one_to_one_mapping;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 
 public class Account {
-	@Column(name="accountNo",unique = true)
-	private long accountNo;
-	@Column(name="salary")
-	private int salary;
-	@Column(name="bankname",columnDefinition = "Varchar(50)" )
+	private int accnumber;
 	private String bankname;
+	private double balance;
+	
 	public Account()
 	{
 		
 	}
-	public long getAccountNo() {
-		return accountNo;
+	
+	public Account(int accnumber, String bankname, double balance) {
+		super();
+		this.accnumber = accnumber;
+		this.bankname = bankname;
+		this.balance = balance;
 	}
-	public void setAccountNo(long accountNo) {
-		this.accountNo = accountNo;
+
+	public int getAccnumber() {
+		return accnumber;
 	}
-	public int getSalary() {
-		return salary;
+
+	public void setAccnumber(int accnumber) {
+		this.accnumber = accnumber;
 	}
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
+
 	public String getBankname() {
 		return bankname;
 	}
+
 	public void setBankname(String bankname) {
 		this.bankname = bankname;
 	}
-	public Account(long accountNo, int salary, String bankname) {
-		super();
-		this.accountNo = accountNo;
-		this.salary = salary;
-		this.bankname = bankname;
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	
 

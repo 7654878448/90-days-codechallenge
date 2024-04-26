@@ -1,42 +1,53 @@
-package annotation_based_connection;
+package one_to_one_mapping;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 
 public class Education {
-	@Column(name="rollNo",unique = true)
-	private int rollNo;
-	@Column(name="collegename" ,length = 104)
-	private String collegeName;
+	private String collegename;
+	private String adress;
 	
 	public Education()
 	{
 		
 	}
-
-	public int getRollNo() {
-		return rollNo;
-	}
-
-	public void setRollNo(int rollNo) {
-		this.rollNo = rollNo;
-	}
-
-	public String getCollegeName() {
-		return collegeName;
-	}
-
-	public void setCollegeName(String collegeName) {
-		this.collegeName = collegeName;
-	}
-
-	public Education(int rollNo, String collegeName) {
+	
+	
+	
+	public Education(String collegename, String adress) {
 		super();
-		this.rollNo = rollNo;
-		this.collegeName = collegeName;
+		this.collegename = collegename;
+		this.adress = adress;
 	}
+
+
+
+	public String getCollegename() {
+		return collegename;
+	}
+
+
+
+	public void setCollegename(String collegename) {
+		this.collegename = collegename;
+	}
+
+
+
+	public String getAdress() {
+		return adress;
+	}
+
+
+
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+	
+	
+	
+	
 	
 	
 
