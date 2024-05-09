@@ -1,7 +1,7 @@
 package java8features;
 interface vechicle{
 	public void start();
-	//public void clean();__-->>>it will give me an because it is an abstract method for this in java 8 one method called default and static method that has method body
+//public void clean();-->>> error because it will give me an because it is an abstract method for this in java 8 one method called default and static method that has method body
 	public default void clean()
 	{
 		System.out.println("cleaning is process");
