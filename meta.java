@@ -1,42 +1,14 @@
-package com.spring;
+package com.scope;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class meta {
-	private String facebookId;
-	private String password;
-	
-	
-	public meta()
+	public void insertdetails(ClassPathXmlApplicationContext ap)
 	{
-		System.out.println("work always");
-		
+	//ClassPathXmlApplicationContext cn=	new ClassPathXmlApplicationContext("scope.xml");
+	Employee emp=(Employee)	ap.getBean("emp");
+	System.out.println(emp);
 	}
-
-
-	public String getFacebookId() {
-		return facebookId;
-	}
-
-
-	public void setFacebookId(String facebookId) {
-		this.facebookId = facebookId;
-	}
-
-
-	public String getPassword() {
-		return password;
-	}
-
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-
-	@Override
-	public String toString() {
-		return "meta [facebookId=" + facebookId + ", password=" + password + "]";
-	}
-	
 	
 
 }

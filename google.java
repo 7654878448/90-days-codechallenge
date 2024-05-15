@@ -1,39 +1,17 @@
-package com.spring;
+package com.scope;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class google {
 	
-	private String gamilId;
-	private String password;
-	
-	public google()
+	public void insertdetails(ClassPathXmlApplicationContext cs)
 	{
-		System.out.println("will work only if need");
+		//ClassPathXmlApplicationContext xp=	new ClassPathXmlApplicationContext("scope.xml");
+		Employee em=(Employee) cs.getBean("emp");
+		em.setEid(100);
+		em.setEname("kholi");
+		System.out.println(em);
 		
 	}
-
-	public String getGamilId() {
-		return gamilId;
-	}
-
-	public void setGamilId(String gamilId) {
-		this.gamilId = gamilId;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return "google [gamilId=" + gamilId + ", password=" + password + "]";
-	}
-	
-	  
-	
-	
 
 }
