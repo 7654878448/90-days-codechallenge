@@ -1,14 +1,13 @@
-package com.scope;
+package com.spring;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class meta {
-	public void insertdetails(ClassPathXmlApplicationContext ap)
+	public void insertemp(ClassPathXmlApplicationContext cs)
 	{
-	//ClassPathXmlApplicationContext cn=	new ClassPathXmlApplicationContext("scope.xml");
-	Employee emp=(Employee)	ap.getBean("emp");
-	System.out.println(emp);
+		Employee em=(Employee)cs.getBean("emp");
+		System.out.println(em);
+		
 	}
-	
 
 }

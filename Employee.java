@@ -1,21 +1,16 @@
-package com.scope;
+package com.spring;
 
 public class Employee {
-	private int eid;
-	private String Ename;
-	
-	public Employee()
-	{
-		//default constructor>>
-	}
-	
-	
 	@Override
 	public String toString() {
-		return "Employee [eid=" + eid + ", Ename=" + Ename + "]";
+		return "Employee [eid=" + eid + ", ename=" + ename + "]";
 	}
-
-
+	private int eid;
+	private String ename;
+	public Employee()
+	{
+		
+	}
 	public int getEid() {
 		return eid;
 	}
@@ -23,10 +18,11 @@ public class Employee {
 		this.eid = eid;
 	}
 	public String getEname() {
-		return Ename;
+		return ename;
 	}
 	public void setEname(String ename) {
-		Ename = ename;
+		this.ename = ename;
 	}
+	
 
 }
