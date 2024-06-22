@@ -1,17 +1,39 @@
 package com.spring;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class google {
-	public void insertemp(ClassPathXmlApplicationContext cs)
+	
+	private String gamilId;
+	private String password;
+	
+	public google()
 	{
-		Employee em=(Employee)cs.getBean("emp");
-		em.setEid(101);
-		em.setEname("Sumit Sehgal");
-		System.out.println(em);
-		
+		System.out.println("will work only if need");
 		
 	}
+
+	public String getGamilId() {
+		return gamilId;
+	}
+
+	public void setGamilId(String gamilId) {
+		this.gamilId = gamilId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "google [gamilId=" + gamilId + ", password=" + password + "]";
+	}
+	
+	  
+	
 	
 
 }

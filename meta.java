@@ -1,13 +1,42 @@
 package com.spring;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class meta {
-	public void insertemp(ClassPathXmlApplicationContext cs)
+	private String facebookId;
+	private String password;
+	
+	
+	public meta()
 	{
-		Employee em=(Employee)cs.getBean("emp");
-		System.out.println(em);
+		System.out.println("work always");
 		
 	}
+
+
+	public String getFacebookId() {
+		return facebookId;
+	}
+
+
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	@Override
+	public String toString() {
+		return "meta [facebookId=" + facebookId + ", password=" + password + "]";
+	}
+	
+	
 
 }
