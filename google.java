@@ -1,39 +1,15 @@
 package com.spring;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
+@Component
+@Lazy//this line of code is for make our class lazy just like xml lazy-init=true
+
 public class google {
-	
-	private String gamilId;
-	private String password;
-	
 	public google()
 	{
-		System.out.println("will work only if need");
-		
+		System.out.println("google object is created");
 	}
-
-	public String getGamilId() {
-		return gamilId;
-	}
-
-	public void setGamilId(String gamilId) {
-		this.gamilId = gamilId;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return "google [gamilId=" + gamilId + ", password=" + password + "]";
-	}
-	
-	  
-	
-	
 
 }
