@@ -1,14 +1,23 @@
 package com.spring;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import java.util.HashMap;
 
-import com.config.myconfiguration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class launch {
 	public static void main(String[]args)
 	{
-		AnnotationConfigApplicationContext ano=	new AnnotationConfigApplicationContext(myconfiguration.class);
-	//google go=ano.getBean(google.class);
+		ClassPathXmlApplicationContext cl=	new ClassPathXmlApplicationContext("bean.xml");
+	    google google=(google) cl.getBean("google");
+	    System.out.println(google.getList().getClass());
+	    System.out.println(google);
+	 ClassPathXmlApplicationContext Meta=   new ClassPathXmlApplicationContext("bean.xml");
+	  meta m1=(meta)  Meta.getBean("meta");
+	  System.out.println(m1.getMap().getClass());
+	  System.out.println(m1);
+	  
+	
 	}
+	
 
 }
