@@ -1,79 +1,42 @@
 package com.spring;
 
-import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+//@Scope(value="prototype")// if our class having the scope of prototype then we have to explicitly call the destroy method>>
+
+@Lazy
 public class google {
-	private int gid;
-	private String cname;
-	private List<String>list;
-	
-	
-	
+	private int k=10;
 	public google()
 	{
-		
+		System.out.println("this is an google Object");
 	}
-	
-
-
-
-	public google(int gid, String cname, List<String> list) {
-		super();
-		this.gid = gid;
-		this.cname = cname;
-		this.list = list;
+	@PostConstruct
+	public void init()
+	{
+		System.out.println("this is an init method");
 	}
-
-
-
-
-	public int getGid() {
-		return gid;
+	@PreDestroy
+	public void destroy()
+	{
+		System.out.println("this is an destroy method");
 	}
-
-
-
-
-	public void setGid(int gid) {
-		this.gid = gid;
+	public int getK() {
+		return k;
 	}
-
-
-
-
-	public String getCname() {
-		return cname;
+	public void setK(int k) {
+		this.k = k;
 	}
-
-
-
-
-	public void setCname(String cname) {
-		this.cname = cname;
-	}
-
-
-
-
-	public List<String> getList() {
-		return list;
-	}
-
-
-
-
-	public void setList(List<String> list) {
-		this.list = list;
-	}
-
-
-
-
 	@Override
 	public String toString() {
-		return "google [gid=" + gid + ", cname=" + cname + ", list=" + list + "]";
+		return "google [k=" + k + "]";
 	}
-	
 	
 
 }
