@@ -1,45 +1,32 @@
 package com.spring;
 
-import java.util.List;
-
 public class Employee {
-	private Car car;
-	private Account acc;
-	private List<String>Booklist;
+	private int eid;
+	private int sal;
 	
 	
-	public Employee()
-	{
-		System.out.println("employee Object is Created");
+	
+	
+	public Employee(int eid, int sal) {
+		super();
+		System.out.println("bina change hue constructor");
+		this.eid = eid;
+		this.sal = sal;
 	}
-	public Car getCar() {
-		return car;
-	}
-	public void setCar(Car car) {
-		this.car = car;
-	}
-	public Account getAcc() {
-		return acc;
-	}
-	public void setAcc(Account acc) {
-		this.acc = acc;
-	}
-	public List<String> getBooklist() {
-		return Booklist;
-	}
-	public void setBooklist(List<String> booklist) {
-		Booklist = booklist;
+	public Employee(String  eid, String  sal) {
+		
+		super();
+		System.out.println("parse int constructor");
+		this.eid = Integer.parseInt(eid);
+		this.sal = Integer.parseInt(sal);
 	}
 	@Override
 	public String toString() {
-		return "Employee [car=" + car + ", acc=" + acc + ", Booklist=" + Booklist + "]";
+		return "Employee [eid=" + eid + ", sal=" + sal + "]";
 	}
-	public Employee(Car car, Account acc, List<String> booklist) {
-		super();
-		this.car = car;
-		this.acc = acc;
-		Booklist = booklist;
-	}
+	
+
+	
 	
 
 }
