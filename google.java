@@ -1,42 +1,30 @@
 package com.spring;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import java.util.List;
 
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Scope(value="prototype")// if our class having the scope of prototype then we have to explicitly call the destroy method>>
-
-@Lazy
 public class google {
-	private int k=10;
-	public google()
-	{
-		System.out.println("this is an google Object");
-	}
-	@PostConstruct
-	public void init()
-	{
-		System.out.println("this is an init method");
-	}
-	@PreDestroy
-	public void destroy()
-	{
-		System.out.println("this is an destroy method");
-	}
-	public int getK() {
-		return k;
-	}
-	public void setK(int k) {
-		this.k = k;
-	}
-	@Override
-	public String toString() {
-		return "google [k=" + k + "]";
-	}
-	
+    @Value("345")
+    private int age;
 
+    @Value("Sumit Sehgal")
+    private String name;
+
+    @Value("#{getlist}")
+    private List<String> list;
+
+    @Value("#{getAcc}")
+    private List<Account> acc;
+
+    public google() {
+        System.out.println("google Object is created");
+    }
+
+    @Override
+    public String toString() {
+        return "google [age=" + age + ", name=" + name + ", list=" + list + ", acc=" + acc + "]";
+    }
 }

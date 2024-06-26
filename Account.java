@@ -1,49 +1,18 @@
-package one_to_one_mapping;
+package com.spring;
 
-import javax.persistence.Embeddable;
+import org.springframework.stereotype.Component;
 
-@Embeddable
-
+@Component
 public class Account {
-	private int accnumber;
-	private String bankname;
-	private double balance;
-	
-	public Account()
-	{
-		
-	}
-	
-	public Account(int accnumber, String bankname, double balance) {
-		super();
-		this.accnumber = accnumber;
-		this.bankname = bankname;
-		this.balance = balance;
-	}
+    private int accnumber;
+    private String bankname;
 
-	public int getAccnumber() {
-		return accnumber;
-	}
+    public Account() {
+        System.out.println("Account Object is Created");
+    }
 
-	public void setAccnumber(int accnumber) {
-		this.accnumber = accnumber;
-	}
-
-	public String getBankname() {
-		return bankname;
-	}
-
-	public void setBankname(String bankname) {
-		this.bankname = bankname;
-	}
-
-	public double getBalance() {
-		return balance;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-	
-
+    @Override
+    public String toString() {
+        return "Account [accnumber=" + accnumber + ", bankname=" + bankname + "]";
+    }
 }
